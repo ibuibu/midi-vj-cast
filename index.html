@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebMIDI Test</title>
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+  </head>
+  <body style="margin: 0">
+    <select id="mic_list" size="1">
+      <option>Select Audio Device</option>
+    </select>
+    <button id="setting">Setting</button>
+    <br />
+    <select id="midi-select" size="1">
+      <option>Select MIDI Device</option>
+    </select>
+    <select id="param-select" size="1">
+      <option>Select VJ Type</option>
+    </select>
+    <button id="midi-setting">Setting</button>
+    <br />
+    <input id="room-name" placeholder="room name" />
+    <button id="join-room">配信</button>
+    <div id='receiver-link'></div>
+
+    <p>MIDI Data</p>
+    <input type="text" id="num1" placeholder="status" />
+    <input type="text" id="num2" placeholder="note" />
+    <input type="text" id="num3" placeholder="velocity" />
+    <input type="text" id="device" placeholder="device name" />
+
+    <video id="my-video" width="0px" autoplay controls muted></video>
+    <video id="their-video" width="0px" autoplay controls></video>
+
+    <h2>MIDI-VJ Mapping</h2>
+    <section id="midi-data">
+      <ul></ul>
+    </section>
+
+    <script src="./script/key.js"></script>
+    <script src="./script/midi.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./lib/p5.js"></script>
+    <script src="./sketch/sketch.js"></script>
+  </body>
+</html>

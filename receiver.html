@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebMIDI Test</title>
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+  </head>
+  <body style="margin: 0">
+    <select id="param-select" size="1" style='display: none;'>
+      <option>typeを選択</option>
+    </select>
+
+    <video id="my-video" width="0px" autoplay controls muted></video>
+    <video id="their-video" width="0px" autoplay playsinline></video>
+
+    <h2>VJ Area</h2>
+    <section id="midi-data">
+      <ul></ul>
+    </section>
+
+    <script src="./script/key.js"></script>
+    <script src="./script/main_receive.js"></script>
+    <script src="./lib/p5.js"></script>
+    <script src="./sketch/sketch.js"></script>
+  </body>
+</html>
